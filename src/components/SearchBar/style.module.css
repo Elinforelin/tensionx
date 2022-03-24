@@ -1,0 +1,46 @@
+.wrapper {
+	top: 100px;
+	height: 48px;
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto;
+	max-width: 1440px;
+}
+.wrapper .students {
+	position: relative;
+	left: -40px;
+	height: 24px;
+	font-weight: 700;
+	color: #5b5b5b;
+	font-size: 20px;
+	margin: 12px 29px 12px 40px;
+}
+.wrapper .search {
+	width: 499px;
+	margin: 4px 0 4px 0;
+	padding: 0;
+	background-color: #f2f2f2;
+}
+.wrapper .csv {
+	border: none;
+	background-color: white;
+	font-family: "Rubik";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	color: #c0c0c0;
+}
+.wrapper .csvDisabled {
+	border: none;
+	background-color: white;
+	font-family: "Rubik";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	color: #c0c0c0;
+	pointer-events: none;
+}
+.csvIcon {
+	font-weight: 700 !important;
+	font-size: 13px !important;
+}

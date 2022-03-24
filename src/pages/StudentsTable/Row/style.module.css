@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono&family=Rubik:wght@300;400&display=swap");
+
+.blue {
+	color: rgb(0, 68, 255);
+}
+.green {
+	color: #0f9d58;
+}
+.red {
+	color: #db4437;
+}
+.yellow {
+	color: #e2b534;
+}
+.summaryContent {
+	align-items: center;
+	color: #828282;
+	font-family: "Rubik", sans-serif;
+	font-size: 14px;
+}
+.rowEven {
+	background-color: #f9f9f9 !important;
+}
+.nameCell {
+	padding-left: 10px;
+}
+.root {
+	background-color: #f2f2f2;
+}
+.colorPrimary input:checked + svg {
+	color: grey;
+}

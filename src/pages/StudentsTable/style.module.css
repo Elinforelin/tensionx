@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono&family=Rubik:wght@300;400&display=swap");
+
+.blue {
+	color: rgb(0, 68, 255);
+}
+.green {
+	color: #0f9d58;
+}
+.red {
+	color: #db4437;
+}
+.yellow {
+	color: #e2b534;
+}
+.speed {
+	color: brown;
+}
+.score {
+	color: red;
+}
+.table {
+	display: flex;
+}
+.columnSeparator {
+	display: none !important;
+}
+.columnHeadersInner {
+	padding-left: 10px;
+}
+.columnHeaderTitle {
+	font-family: "Rubik", sans-serif;
+	color: #777777;
+}
+.root {
+	max-width: 1300px;
+	width: 100%;
+	margin: 0px auto;
+}
+.selectLabel {
+	display: flex;
+}
+.columnHeaderTitleContainerContent > span input:checked + svg {
+	color: grey;
+}
+.footerContainer div {
+	margin: auto;
+	font-family: "Rubik", sans-serif;
+	font-size: 14px;
+	color: #5b5b5b;
+}

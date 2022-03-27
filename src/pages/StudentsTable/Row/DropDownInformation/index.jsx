@@ -4,6 +4,7 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns";
 
 import classes from "./style.module.css";
 import { useDropDownInformation } from "./useDropDownInformation";
+import { ReactComponent as ReloadIcon } from "../../../../assets/img/reload.svg";
 
 export const DropDownInformation = ({ rowData }) => {
 	const { selectedColor } = useDropDownInformation();
@@ -47,6 +48,7 @@ export const DropDownInformation = ({ rowData }) => {
 							)}
 						/>
 					</LocalizationProvider>
+					<ReloadIcon className={classes.reload}/>
 				</div>
 				<hr />
 				<div>

@@ -25,12 +25,15 @@ const StudentsTable = () => {
 					"columnSeparator--sideRight": classes.columnSeparator,
 					columnHeadersInner: classes.columnHeadersInner,
 					columnHeaderTitle: classes.columnHeaderTitle,
+					columnHeaderTitleContainer: classes.columnHeaderTitleContainer,
 					root: classes.root,
 					footerContainer: classes.footerContainer,
 					selectLabel: classes.selectLabel,
 					columnHeaderTitleContainerContent:
 						classes.columnHeaderTitleContainerContent,
+					selectedRowCount: classes.selectedRowCount,
 				}}
+				hideFooterSelectedRowCount
 				paginationMode="server"
 				rowCount={students.length * totalPages}
 				pagination
@@ -46,7 +49,6 @@ const StudentsTable = () => {
 				row={(student) => student.id}
 				columns={columns}
 				checkboxSelection
-				checkboxSelectionVisibleOnly
 				rowsPerPageOptions={[5, 10, 20]}
 				onPageChange={onPageChange}
 				onPageSizeChange={onPageSizeChange}

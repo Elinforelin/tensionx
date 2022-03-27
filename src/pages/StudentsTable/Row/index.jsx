@@ -5,6 +5,7 @@ import { AccordionDetails, AccordionSummary, Checkbox } from "@mui/material";
 import { useRow } from "./useRow";
 import classes from "./style.module.css";
 import { DropDownInformation } from "./DropDownInformation/index";
+import { Cell } from "./Cell/index";
 
 export const Row = ({ rowData }) => {
 	const { selectedColor, onChange, selectedStudents } = useRow({
@@ -16,12 +17,22 @@ export const Row = ({ rowData }) => {
 			<Accordion>
 				<AccordionSummary
 					classes={{
-						content: classes.summaryContent,
+						root: classes.summaryRoot,
+						content: `${classes.summaryContent} ${
+							rowData.row.archived ? classes.summaryContentArchived : ""
+						}`,
 					}}
-					className={rowData.rowId % 2 === 0 ? classes.rowEven : ""}
+					className={`${rowData.rowId % 2 === 0 ? classes.rowEven : ""} ${
+						selectedStudents.some(({ id }) => id === rowData.rowId)
+							? classes.selectedStudents
+							: ""
+					}`}
 					expandIcon={<ExpandMoreIcon />}
 					aria-controls="panel1bh-content"
 				>
+					{rowData.row.archived && (
+						<div className={classes.archivedTitle}>ARCHIVED</div>
+					)}
 					{rowData?.renderedColumns.map((cell, index) => {
 						return cell.field === "__check__" ? (
 							<Checkbox
@@ -38,17 +49,12 @@ export const Row = ({ rowData }) => {
 								size="medium"
 							/>
 						) : (
-							<div
-								className={`${selectedColor(cell.field)} ${
-									index === 1 ? classes.nameCell : ""
-								}`}
-								key={index}
-								style={{
-									width: cell.width,
-								}}
-							>
-								{rowData.row[cell.field]}
-							</div>
+							<Cell
+								cell={cell}
+								index={index}
+								selectedColor={selectedColor}
+								rowData={rowData}
+							/>
 						);
 					})}
 				</AccordionSummary>

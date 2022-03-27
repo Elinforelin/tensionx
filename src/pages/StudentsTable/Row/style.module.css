@@ -12,21 +12,57 @@
 .yellow {
 	color: #e2b534;
 }
-.summaryContent {
+div.summaryRoot {
+	padding: 0;
+}
+div.summaryContent {
+	position: relative;
 	align-items: center;
 	color: #828282;
 	font-family: "Rubik", sans-serif;
 	font-size: 14px;
+	height: 48px;
+	box-sizing: border-box;
+	margin: 0;
+	padding-left: 10px;
+}
+div.summaryContentArchived {
+	height: 81px;
+	align-items: flex-end;
+	background-color: #f9f9f9;
+	padding-bottom: 12px;
+	padding-left: 10px;
+}
+div.summaryContentArchived div {
+	color: #c0c0c0;
+}
+.div.summaryContentArchived span + svg {
+	margin: 100px !important;
 }
 .rowEven {
 	background-color: #f9f9f9 !important;
 }
-.nameCell {
-	padding-left: 10px;
-}
 .root {
 	background-color: #f2f2f2;
 }
+.selectedStudents {
+	background-color: #f2f2f2 !important;
+	border: 1px solid #c0c0c0 !important;
+}
 .colorPrimary input:checked + svg {
 	color: grey;
+}
+
+.archivedTitle {
+	height: 33px;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	padding: 4px 0 4px 33px;
+	display: flex;
+	align-items: center;
+	color: #5b5b5b !important;
+	box-sizing: border-box;
 }

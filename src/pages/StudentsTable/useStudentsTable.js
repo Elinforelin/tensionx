@@ -47,6 +47,8 @@ export const useStudentsTable = () => {
   const studentsWithKey = useMemo(() => students.map((student, i) => ({
     ...student,
     id: i,
+    archived: i + 1 === students.length ? true : false,
+    actions: ''
   })), [students]);
 
 

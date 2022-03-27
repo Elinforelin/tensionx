@@ -1,26 +1,24 @@
-.wrap {
-}
-
 .wrapper {
 	height: 60px;
 	left: 0px;
 	top: 0px;
-	order: 0;
-	flex-grow: 0;
-	margin: 0px 0px;
 	margin: 20px 40px 20px;
 	height: 20px;
 	color: #777777;
 	justify-content: space-around;
 	display: flex;
-	max-width: 1440px;
 }
-.wrapper Button {
+.wrapper button {
 	font-family: "Rubik";
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
 	color: #777777;
+}
+.centerBtns {
+	width: 660px;
+	display: flex;
+	justify-content: space-around;
 }
 .wrapper .activeStudents {
 	width: 100px;
@@ -35,12 +33,10 @@
 .avatar {
 	position: relative;
 	align-items: center;
-	align-self: center;
 	justify-content: center;
 	display: flex;
-	left: 25px;
+	margin-left: 250px;
 }
 .school {
-	right: 45px;
-	position: relative;
+	margin-right: 115px;
 }

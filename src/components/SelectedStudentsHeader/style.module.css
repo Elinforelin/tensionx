@@ -10,42 +10,50 @@
 .wrapper {
 	display: flex;
 	color: white;
+	margin-right: 40px;
 }
 .archive {
-	width: 200px;
+	width: 160px;
 	height: 20px;
 	color: #424242;
 	font-weight: 700;
 	font-family: "Rubik", sans-serif;
 	margin: 14px 0;
 	font-size: 14px;
+	display: flex;
+	justify-content: space-around;
 }
 .selected {
 	color: white;
 	font-family: "Rubik", sans-serif;
 	margin: 14px 70px 14px 40px;
 	font-size: 14px;
+	font-weight: 700;
 	width: 200px;
 	height: 20px;
 	font-size: 14px;
 }
 .cancelBtn {
-	width: 200px;
+	font-weight: 700;
+	width: 160px;
 	color: white;
 	border: none;
 	font-size: 14px;
 	background-color: transparent;
 	margin: 14px 0;
 	font-family: "Rubik", sans-serif;
+	cursor: pointer;
 }
 .csv {
+	background-color: #c0c0c0;
 	border: none;
-	font-family: "Rubik";
-	font-style: normal;
 	font-weight: 700;
-	font-size: 14px;
-	color: white;
-	background-color: transparent;
+	margin-left: 20px;
+}
+.csv button {
+	font-family: "Rubik";
+	font-size: 14px !important;
+	background-color: #c0c0c0;
 	margin-right: 15px;
 }
 .csvIcon {

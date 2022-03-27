@@ -4,6 +4,7 @@ import FileUploadIcon from "@mui/icons-material/FileUpload";
 
 import classes from "./style.module.css";
 import { useSelectedStudentsHeader } from "./useSelectedStudentsHeader";
+import { ReactComponent as ArchivedIcon } from "../../assets/img/archivedIcon.svg";
 
 export const SelectedStudentsHeader = () => {
 	const { CSVDownloader, Type } = useCSVDownloader();
@@ -11,7 +12,12 @@ export const SelectedStudentsHeader = () => {
 
 	return (
 		<div className={classes.wrap}>
-			<div className={classes.selected}>{selectedStudents.length} SELECTED</div>
+			<div className={classes.selected}>
+				{selectedStudents.length === 1
+					? `${selectedStudents.length} STUDENT `
+					: `${selectedStudents.length} STUDENTS `}
+				SELECTED
+			</div>
 			<div className={classes.wrapper}>
 				<div>
 					<button onClick={onCancelClick} className={classes.cancelBtn}>
@@ -38,7 +44,11 @@ export const SelectedStudentsHeader = () => {
 						</IconButton>
 					</CSVDownloader>
 				</div>
-				<div className={classes.archive}>ARCHIVE SELECTED</div>
+
+				<div className={classes.archive}>
+					<ArchivedIcon />
+					ARCHIVE SELECTED
+				</div>
 			</div>
 		</div>
 	);

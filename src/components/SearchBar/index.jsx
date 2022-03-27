@@ -20,7 +20,7 @@ const SearchBar = () => {
 				label="Enter Student Name, Parent or ID here"
 				InputProps={{
 					endAdornment: (
-						<InputAdornment onClick={onClick}>
+						<InputAdornment onClick={onClick} position="end">
 							<IconButton>
 								<SearchIcon />
 							</IconButton>

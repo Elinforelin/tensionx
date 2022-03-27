@@ -164,3 +164,6 @@ th {
 .colorPrimary input:checked + svg {
 	color: grey;
 }
+.reload {
+	margin-left: 193px;
+}
